@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Alegria-Festival_of_Joy-Special_Events</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+
+      <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/css/mdb.min.css" rel="stylesheet">
+
+</head>
+<body>
+  
+<header>
+  <!-- A grey horizontal navbar that becomes vertical on small screens -->
+
+<nav class="navbar navbar-expand-sm fixed-top mybgcolor">
+
+  <!-- Links -->
+
+  <a class="navbar-brand text-danger font-weight-bold" href="#">
+    <img src="{{ url_for('static',filename='allogo.jpg' )}}" alt="Logo" >
+  </a
+
+  <!-- Links -->
+  <ul class="navbar-nav ml-auto animated fadeIn p-3">
+    <li class="nav-item">
+      <a class="nav-link text-danger" href="/specialevents">Special Events</a>
+    </li>
+    <li class="nav-item ">
+      <a class="nav-link text-danger" href="#">Link 2</a>
+    </li>
+
+    <!-- Dropdown -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle text-danger" href="#" id="navbardrop" data-toggle="dropdown">
+        Category
+      </a>
+      <div class="dropdown-menu mybgcolor">
+        <a class="dropdown-item text-danger" href="/sports">Sports</a>
+        <a class="dropdown-item text-danger" href="/performing_arts">Performing Arts</a>
+        <a class="dropdown-item text-danger" href="/gaming">Gaming</a>
+        <a class="dropdown-item text-danger" href="/literary_arts">Literary Arta</a>
+        <a class="dropdown-item text-danger" href="/technical">Technical Events</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+  <style>
+  .mybgcolor {
+    background-color: #051019;
+  }
+
+  .mytxtcolor{
+    color:#051019; 
+  }
+
+  .carousel-inner img{
+    width: 100%;
+    height: 100%;
+  }
+  </style>
+</header>
+
+<body>
+
+    
+  <div class="container mt-5 pb-5" style="padding-top: 100px;">
+
+    <div class="card-deck">
+
+      <div class="card">
+
+            <img class="card-img" src="{{ url_for('static',filename='ArmaanM.jpg')}}" alt="Card image">
+            <div class="card-img-overlay">
+
+              <div class="card-text text-light">
+                <h3>Armaan Malik</h3>
+                <h4>Singer</h4>
+              </div>
+              
+            </div>
+        
+      </div>
+      
+      
+
+      <div class="card">
+
+        <img class="card-img" src="{{ url_for('static',filename='kenny.jpg')}}" alt="Card image">
+            <div class="card-img-overlay">
+
+              <div class="card-text text-light">
+                <h3>Kenny S</h3>
+                <h4>Standup <br>Comedian</h4>
+              </div>
+              
+            </div>
+        
+      </div>
+
+
+      <div class="card">
+
+          <img class="card-img" src="{{ url_for('static',filename='diego.png')}}" alt="Card image">
+            <div class="card-img-overlay">
+
+              <div class="card-text text-light">
+                <h3>Diego Miranda</h3>
+                <h4>Jam Session</h4>
+              </div>
+              
+            </div>
+        
+      </div>
+
+
+    </div>
+
+   </div> 
+
+     <div class="container"> 
+
+      <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <a class="nav-item nav-link active" id="nav-venue-tab" data-toggle="tab" href="#nav-venue" role="tab" aria-controls="nav-venue" aria-selected="true">Venue and Time</a>
+          <a class="nav-item nav-link" id="nav-criteria-tab" data-toggle="tab" href="#nav-criteria" role="tab" aria-controls="nav-criteria" aria-selected="false">Terms & Conditions</a>
+          <a class="nav-item nav-link" id="nav-booking-tab" data-toggle="tab" href="#nav-booking" role="tab" aria-controls="nav-booking" aria-selected="false">Quick Booking</a>
+        </div>
+      </nav>
+        <div class="tab-content p-4" id="nav-tabContent" style="color:#051019;">
+          <div class="tab-pane fade show active" id="nav-venue" role="tabpanel" aria-labelledby="nav-home-tab">
+              <p><i class="fas fa-map-marker-alt fa-2x pl-1"></i>
+              <b class="pl-3">Pillai College Of Engineering,Sector 15,New Panvel, Navi Mumbai</b></p>
+
+              <p class="text-muted"><i class="fas fa-clock fa-2x"></i>
+                <my class="pl-3"><b>Day 1: </b>6th of February 2020 7:00 PM </my>
+                <my class="pl-2"><b>Day 2: </b>7th of February 2020 7:30 PM </my>
+                <my class="pl-2"><b>Day 3: </b>8th of February 2020 7:00 PM </my>
+
+
+              </p>
+              
+          </div>
+          <div class="tab-pane fade" id="nav-criteria" role="tabpanel" aria-labelledby="nav-profile-tab">
+            <ul>
+              <li>No Age Limit</li>
+              <li>Deodrants and consumables not allowed.</li>
+              <li> First Come First serve basis</li>
+            </ul>
+          </div>
+          <div class="tab-pane fade" id="nav-booking" role="tabpanel" aria-labelledby="nav-contact-tab">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </div>  
+        </div>
+  </div>
+
+      <style>
+        .card{
+          position: relative;
+          overflow: hidden;
+        }
+        .card:before{
+
+          position: absolute;
+          content: '';
+          width: 70%;
+          height: 170%;
+          background: rgba(5,16,25,0.6);
+          top: -50%;
+          left: -80%;
+          z-index: 1;
+          transform: rotate(25deg);
+          transform-origin: center top 0;
+          transition: .5s ease;
+        }
+
+        .card:hover:before{
+          left: 10%;
+        }
+
+        .card img{
+          width: 5%
+          height:auto;
+        }
+
+  
+
+        .card-text{
+          width: 100%;
+          padding: 0 20px;
+          position: absolute;
+          top:-100%;
+          color: #fff;
+          left: 0;
+          z-index: 2;
+          transition: 1.1s;
+          font-family: poppins;
+        }
+
+        .card:hover .card-text{
+          top: 33px;
+        }
+
+
+      </style>
+
+
+
+      <div class="container-fluid mybgcolor">
+
+          
+          <div class="container-fluid">
+                        <div class="d-flex justify-content-md-center social_icon offset-8">
+                        <span><i class="fab fa-linkedin"></i></span><br>
+                        <span><i class="fab fa-facebook-square"></i></span>
+                        <span><i class="fab fa-instagram"></i></span>
+                        <span><i class="fab fa-twitter"></i></span>
+
+                                     <style>
+                                      .social_icon span{
+                                      font-size: 40px;
+                                      margin-left: 30px;
+                                      color: #FFC312;
+                                      }
+
+                                      .social_icon span:hover{
+                                      color: white;
+                                      cursor: pointer;
+                                      }
+
+                                      </style>
+                      </div> 
+          </div>  
+      </div>          
+
+  
+
+
+    <!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.15.0/js/mdb.min.js"></script>
+
+  
+</body>
+</html>

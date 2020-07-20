@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Alegria-Festival_of_Joy-Special_Events</title>
+  <meta charset="utf-8">
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='myihover.css')}}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+
+      <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/css/mdb.min.css" rel="stylesheet">
+
+  <!--This is animate.css cdn-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <script> </script>
+
+
+</head>
+<body>
+  
+<header> 
+
+<nav class="navbar navbar-expand-sm fixed-top mybgcolor">
+
+
+  <a class="navbar-brand text-danger font-weight-bold" href="#">
+    <img src="{{ url_for('static',filename='allogo.jpg' )}}" alt="Logo" style="width:60px;height: 60px;">
+  </a>
+
+  <ul class="navbar-nav ml-auto">
+    <li class="nav-item">
+      <a class="nav-link text-danger" href="specialevents.html">Special Events</a>
+    </li>
+    <li class="nav-item ">
+      <a class="nav-link text-danger" href="#">Link 2</a>
+    </li>
+
+    <li class="nav-item dropdown ">
+      <a class="nav-link dropdown-toggle text-danger" href="#" id="navbardrop" data-toggle="dropdown">
+        Dropdown link
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Link 1</a>
+        <a class="dropdown-item" href="#">Link 2</a>
+        <a class="dropdown-item" href="#">Link 3</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+
+
+  <style>
+  .mybgcolor {
+    background-color: #051019;
+  }
+
+  .mytxtcolor{
+    color:#051019; 
+  }
+
+  .carousel-inner img{
+    width: 100%;
+    height: 100%;
+  }
+
+  .bgmycolor{
+
+    background: #051019;
+  }
+  
+  .btn{
+    width: 1000px;
+  }
+
+  .btn-change{
+    -webkit-transition: all 0.5s ease-in-out;
+    border: 0px;
+    color: #fff;
+}
+.btn-change:hover{
+    -webkit-transform: scale(1.1);
+    color: #fff;
+    background: #051019; 
+  }
+  </style>
+</header>
+
+<body>
+
+        <div class="container bgmycolor text-light">
+         <div class="media container">
+        <div class="media-body" style="margin-top: 120px;">
+          <div class="animated bounceInDown">
+          
+          <h5 class="mt-5 display-2">{{data[0]}}</h5>
+          </div>
+          <p class="text-muted">
+          {{ data[4] }}</p>
+        </div>
+
+         <img class="animated bounceInDown" src="{{ url_for('static',filename=cat_img) }} " style="width: 200px;margin-top: 130px;">
+       </div>
+
+          <div class="container">
+          <dl class="row">
+
+          <dt class="col-sm-3">Prize Pool :</dt>
+          <dd class="col-sm-9">Upto Rs.{{ data[2] }}/-</dd>
+
+
+          <dt class="col-sm-3">Venue :</dt>
+          <dd class="col-sm-9">{{ data[3] }}</dd>
+
+          <dt class="col-sm-3">Dates :</dt>
+          <dd class="col-sm-9">
+            <time>5<sup>th</sup>Feb 2020 to 9<sup>th</sup>Feb 2020</time>
+          </dd>
+
+          <dt class="col-sm-3">Category & PR Point Distribution</dt>
+          <dd class="col-sm-9">Etiam porta sem malesuada magna mollis euismodrra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus. Lorem ipsum dolor sit amet,.</dd>
+
+          </dl>
+        </div>
+        
+              <div class="container" style="margin-bottom: 50px;">
+              <div class="card bgmycolor">
+              <div class="card-header" id="headingOne">
+                <div class="text-center m-0">
+                  <button class="btn btn-change collapsed p-0 m-0" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"> 
+                    <h2 class="font-weight-bold text-muted">Events</h2>
+                  </button>
+                </div>
+              </div>
+
+              <div id="collapseOne" class="collapse container m-2" aria-labelledby="headingOne">
+
+                    <div class="row align-content-center mt-5">
+
+                      {% for img_name,event_name,entry_fee,to_event in event_info %}
+
+                      <div class="col ml-4 mr-4">
+                       <a href="{{ to_event }}" class="container p-3"> 
+                        <div class="box">
+                          <img src="{{ url_for(src_name,filename=img_name)}}" alt="img" class="">
+                        
+                          <div class="inside"></div>
+                          <div class="text text-center">
+                          {{ event_name }}<br>
+                          Entry Fee - Rs. {{ entry_fee }}/-
+                          </div>
+                        </div>
+                       </a>
+                      </div>
+                      {% endfor %}
+                    </div>
+
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+                      
+  
+      <div class="container-fluid mybgcolor">  
+          <div class="container-fluid">
+                        <div class="d-flex justify-content-md-center social_icon offset-8">
+                        <span><i class="fab fa-linkedin"></i></span><br>
+                        <span><i class="fab fa-facebook-square"></i></span>
+                        <span><i class="fab fa-instagram"></i></span>
+                        <span><i class="fab fa-twitter"></i></span>
+
+                                     <style>
+                                      .social_icon span{
+                                      font-size: 40px;
+                                      margin-left: 30px;
+                                      color: #FFC312;
+                                      }
+
+                                      .social_icon span:hover{
+                                      color: white;
+                                      cursor: pointer;
+                                      }
+
+                                      </style>
+                      </div> 
+          </div>  
+      </div>          
+
+  
+
+
+    <!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.15.0/js/mdb.min.js"></script>
+
+  
+</body>
+</html>

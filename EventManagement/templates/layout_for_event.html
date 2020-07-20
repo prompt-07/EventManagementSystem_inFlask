@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Alegria-Festival_of_Joy-Special_Events</title>
+  <meta charset="utf-8">
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='myihover.css')}}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+
+      <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/css/mdb.min.css" rel="stylesheet">
+
+  <!--This is animate.css cdn-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <script> </script>
+
+
+</head>
+<body>
+  
+<header> 
+
+<nav class="navbar navbar-expand-sm fixed-top mybgcolor">
+
+
+  <a class="navbar-brand text-danger font-weight-bold" href="#">
+    <img src="{{ url_for('static',filename='allogo.jpg' )}}" alt="Logo" style="width:60px;height: 60px;">
+  </a>
+
+  <ul class="navbar-nav ml-auto">
+    <li class="nav-item">
+      <a class="nav-link text-danger" href="specialevents.html">Special Events</a>
+    </li>
+    <li class="nav-item ">
+      <a class="nav-link text-danger" href="#">Link 2</a>
+    </li>
+
+    <li class="nav-item dropdown ">
+      <a class="nav-link dropdown-toggle text-danger" href="#" id="navbardrop" data-toggle="dropdown">
+        Dropdown link
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Link 1</a>
+        <a class="dropdown-item" href="#">Link 2</a>
+        <a class="dropdown-item" href="#">Link 3</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+
+
+  <style>
+  .mybgcolor {
+    background-color: #051019;
+  }
+
+  .mytxtcolor{
+    color:#051019; 
+  }
+
+  .carousel-inner img{
+    width: 100%;
+    height: 100%;
+  }
+
+  .bgmycolor{
+
+    background: #051019;
+  }
+  
+  .btn{
+    width: 1000px;
+  }
+
+  .btn-change{
+    -webkit-transition: all 0.5s ease-in-out;
+    border: 0px;
+    color: #fff;
+}
+.btn-change:hover{
+    -webkit-transform: scale(1.1);
+    color: #fff;
+    background: #051019; 
+  }
+  </style>
+</header>
+
+<body>
+
+  <div class="container bgmycolor text-light">
+         <div class="media container">
+        <div class="media-body" style="margin-top: 120px;">
+          <div class="animated bounceInDown">
+          
+          <h5 class="mt-5 display-2">{{ data[1] }}</h5>
+          </div>
+          <p class="text-muted">
+            {{data[2]}}
+          </p>
+        </div>
+
+         <img class="animated bounceInDown" src="{{ url_for('static',filename=event_img) }} " style="width: 200px;margin-top: 130px;">
+       </div>
+
+        <div class="container">
+          <dl class="row">
+
+          <dt class="col-sm-3">Entry Fee :</dt>
+          <dd class="col-sm-9">Rs.{{data[3]}}/-</dd>
+
+
+          <dt class="col-sm-3">Criteria :</dt>
+          <dd class="col-sm-9">{{data[4]}}</dd>
+
+          <dt class="col-sm-3">Winning Prize :</dt>
+          <dd class="col-sm-9">
+            <dl>
+              <dd>
+                 First Prize - {{data[5]}}/-
+              </dd>
+              <dd>
+                 Second Prize - {{data[6]}}
+              </dd>
+              <dd>
+                Third Prize - {{data[7]}}
+              </dd>
+            </dl>
+        </dd>
+
+          <dt class="col-sm-3">No of Participants :</dt>
+          <dd class="col-sm-9">{{data[8]}}</dd>
+
+
+          <dt class="col-sm-3">PR Points :</dt>
+          <dd class="col-sm-9">{{data[9]}}</dd>
+
+
+           <dt class="col-sm-3">Judge :</dt>
+          <dd class="col-sm-9">{{data[10]}}</dd>
+
+          </dl>
+        </div>
+        
+
+
+
+        <div>
+          <form action="http://127.0.0.1:5000/register" method="POST">
+            <input type="submit" name={{data[0]}} value="Register">
+          </form>
+        </div>
+    </div>
+
+  
+      <div class="container-fluid mybgcolor">  
+          <div class="container-fluid">
+                        <div class="d-flex justify-content-md-center social_icon offset-8">
+                        <span><i class="fab fa-linkedin"></i></span><br>
+                        <span><i class="fab fa-facebook-square"></i></span>
+                        <span><i class="fab fa-instagram"></i></span>
+                        <span><i class="fab fa-twitter"></i></span>
+
+                                     <style>
+                                      .social_icon span{
+                                      font-size: 40px;
+                                      margin-left: 30px;
+                                      color: #FFC312;
+                                      }
+
+                                      .social_icon span:hover{
+                                      color: white;
+                                      cursor: pointer;
+                                      }
+
+                                      </style>
+                      </div> 
+          </div>  
+      </div>          
+
+  
+
+
+    <!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.15.0/js/mdb.min.js"></script>
+
+  
+</body>
+</html>
